@@ -1,0 +1,15 @@
+frontend/
+venv/
+.env
+.git/
+.vscode/
+__pycache__/
+*.pyc
+*.log
+*.db
+*.sqlite
+*.sqlite3
+node_modules/
+playwright-report/
+test-results/
+ecommerce_analyzer.db

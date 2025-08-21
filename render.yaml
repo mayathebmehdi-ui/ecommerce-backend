@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: ecommerce-analyzer-backend
+    env: docker
+    plan: free
+    region: frankfurt
+    branch: main
+    rootDir: .
+    autoDeploy: true
+    healthCheckPath: /
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: CORS_ORIGINS
+        value: https://ton-frontend.hostinger.tld
+      - key: PORT
+        value: 10000
