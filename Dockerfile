@@ -18,9 +18,7 @@ RUN playwright install --with-deps chromium
 # Copier le code de l'application
 COPY . .
 
-# Créer un utilisateur non-root pour la sécurité
-RUN useradd -m -u 1000 appuser && chown -R appuser:appuser /app
-USER appuser
+# Render gère la sécurité, pas besoin d'utilisateur custom
 
 EXPOSE 10000
 
